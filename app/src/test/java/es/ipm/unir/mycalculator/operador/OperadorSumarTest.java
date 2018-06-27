@@ -33,7 +33,8 @@ public class OperadorSumarTest {
                 {1d, 1d, 2d},
                 {3d, -2d, 1d},
                 {-3d, 0d, -3d},
-                {0d, 0d, 0d}
+                {0d, 0d, 0d},
+                {0d, -5.2d, -5.2d}
         });
     }
     double expected;

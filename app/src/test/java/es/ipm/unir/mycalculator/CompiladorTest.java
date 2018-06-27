@@ -31,6 +31,7 @@ public class CompiladorTest {
     public void basic_2() {
         assertEquals(3.0, compilador.parse("1.0 + 2.0").execute());
     }
+
     @Test
     public void notValidExpression_1() {
 
@@ -77,6 +78,26 @@ public class CompiladorTest {
     @Test
     public void notValidExpression_6() {
         String operacion = "(9 + 2)";
+
+        exception.expect(ExpresionNoValidaExcepcion.class);
+        exception.expectMessage("La cadena no es una operación valida: " + operacion);
+
+        compilador.parse(operacion).execute();
+    }
+
+    @Test
+    public void notValidExpression_7() {
+        String operacion = "* 2";
+
+        exception.expect(ExpresionNoValidaExcepcion.class);
+        exception.expectMessage("La cadena no es una operación valida: " + operacion);
+
+        compilador.parse(operacion).execute();
+    }
+
+    @Test
+    public void notValidExpression_8() {
+        String operacion = "1 * 2 / 3";
 
         exception.expect(ExpresionNoValidaExcepcion.class);
         exception.expectMessage("La cadena no es una operación valida: " + operacion);
