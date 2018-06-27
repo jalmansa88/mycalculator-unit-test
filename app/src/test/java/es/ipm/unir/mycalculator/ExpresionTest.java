@@ -40,7 +40,7 @@ public class ExpresionTest {
     }
 
     @Test
-    public void expesionIntegrationTest_1() {
+    public void expresionIntegrationTest_1() {
         Operador operador = OperadorFactory.getOperador("*");
         Operando operando1 = new SingleValue(5);
         Operando operando2 = new SingleValue(5);
@@ -53,7 +53,7 @@ public class ExpresionTest {
     }
 
     @Test
-    public void expesionIntegrationTest_2() {
+    public void expresionIntegrationTest_2() {
         Operador operador = OperadorFactory.getOperador("/");
         Operando operando1 = new SingleValue(5);
         Operando operando2 = new SingleValue(5);

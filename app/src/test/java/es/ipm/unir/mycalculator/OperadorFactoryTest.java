@@ -58,4 +58,12 @@ public class OperadorFactoryTest {
 
         OperadorFactory.getOperador(" ");
     }
+    @Test
+    public void exception_operadorEsNumber(){
+
+        exception.expect(OperadorNoReconozidoExcepcion.class);
+        exception.expectMessage("8");
+
+        OperadorFactory.getOperador("8");
+    }
 }
